@@ -1,0 +1,23 @@
+﻿# Demo config for taygedo-toolkit
+window_title: "ZenlessZoneZero"
+key_start_running: "f9"
+key_stop_running: "f10"
+left_click_interval: 0.08
+right_click_cooldown: 0.20
+screenshot_interval: 0.05
+
+# ROI in standard resolution (1920x1080)
+# [x1, y1, x2, y2]
+red_detect_roi: [560, 220, 1360, 860]
+
+# HSV threshold for red flash detection
+# OpenCV HSV range: H in [0,179], S,V in [0,255]
+red_hsv_lower: [0, 120, 120]
+red_hsv_upper: [12, 255, 255]
+red_pixel_ratio_threshold: 0.006
+
+# Optional OCR probe area. null means use red_detect_roi.
+ocr_probe_roi: null
+
+# If true, print recognized text per loop (debug)
+log_ocr_text: false
